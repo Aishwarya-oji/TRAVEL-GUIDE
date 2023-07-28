@@ -1,0 +1,213 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    transition: all ease-in-out 100ms;
+}
+body{
+    /* background: url("image/BG1_blur.jpg"); */
+    /* background-image: linear-gradient(to bottom, #ff8080, pink); */
+    /* background-image: linear-gradient(to bottom, rgb(255, 255, 255), #e6dfdf); */
+    /* background-image: linear-gradient(to bottom, #5edfff , #3e64ff); */
+    width: 100vw;
+    height: 100vh;
+    color: white;
+    overflow: hidden;
+    position: relative;
+    background: #46290d;
+    background-repeat: no-repeat;
+    font-family: 'Muli', sans-serif;  
+}
+.container{
+    width: 80%;
+    margin: 0 auto;
+}
+/* Main */
+#main{
+    position: relative;
+}
+#headingBoldText{
+    top: 10px;
+    z-index: -1;
+    color: white;
+    font-size: 9vh;
+    text-align: center;
+    position: relative;
+    font-family: 'Righteous', cursive;
+}
+#lightBoldText{ 
+    top: -5vh;
+    left: 40vw;
+    z-index: 2;
+    font-size: 8vh;
+    color: #19010067;
+    position: relative;
+    font-family: 'Righteous', cursive;
+}
+#image{
+    z-index: 1;
+    width: 200px;
+    height: 200px;
+    margin: 0 auto;
+    border-radius: 50%;
+    position: relative;
+}
+#displayImage{
+    top: -60px;
+    left: -40px;
+    width: 250px;
+    opacity: 0.9;
+    position: absolute;
+}
+#info{
+    padding: 1vh;
+    font-size: 2vh;
+    margin-top: -4vh;
+    position: relative;
+    text-align: justify;
+}
+#option{
+    width: 80%;
+    margin: 2vh auto;
+    position: relative;
+}
+#option p{
+    font-size: 2vh;
+    position: absolute;
+}
+#option p::before{
+    content: " ";
+    width: 10px;
+    height: 10px;
+    display: inline-block;
+    background: #19010067;
+}
+#option div{
+    width: 80px;
+    height: 80px;
+    margin: 5vh 2vw;
+    border-radius: 50%;
+    display: inline-block;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    transition: all ease-in-out 100ms;
+    box-shadow: 10px 5px 5px #1b1b1b69;
+}
+#option div:hover{
+    cursor: pointer;
+    transform: scale(1.1);
+}
+#option div:active{
+    transform: translateY(4px);
+}
+#option1{
+    background: url("https://i.postimg.cc/qqSx4Z42/india.jpg");
+}
+#option2{
+    background: url("https://i.postimg.cc/zvVkm1ZJ/japan.jpg");
+}
+/* footer */
+footer{
+    bottom: 0;
+    width: 80%;
+    position: absolute;
+    
+}
+footer div{
+    display: inline-block;
+}
+#socialMedia{
+    left: 0;
+    bottom: 10px;
+    position: absolute; 
+}
+#socialMedia i{
+    margin: 0 1vw;
+    font-size: 1em;
+    display: inline-block;
+}
+#socialMedia i:hover{
+    cursor: pointer;
+    transform: scale(1.2);
+}
+#more{
+    right: 0;
+    bottom: 10px;
+    font-size: .5em;
+    position: absolute;
+}
+#more:hover{
+    cursor: pointer;
+    transform: scale(1.2);
+}
+
+/* Tablets*/
+@media only screen and (min-width: 768px){
+    #headingBoldText{
+        top: 20px;
+        font-size: 12vh;
+    }
+    #lightBoldText{
+        left: 35vw;
+        font-size: 12vh;
+    }
+    #image{
+        width: 300px;
+        height: 300px;
+    }
+    #displayImage{
+        top: -90px;
+        width: 400px;
+    }
+    #option div{
+        width: 100px;
+        height: 100px;
+    }
+    #socialMedia i, #more{
+        font-size: 1.2em;
+    }
+}
+/* Desktop */
+@media only screen and (min-width: 1400px){
+    #headingBoldText{ 
+        top: 20px;
+        left: 20px;
+        z-index: 1;
+        font-size: 12vh;
+        text-align: unset;
+    }
+    #lightBoldText{
+        left: 0;
+        top: -70px;
+        z-index: -1;
+        font-size: 25em;
+        position: absolute;
+    }
+    #displayImage{
+        top: 50%;
+        left: 50%;
+        z-index: 3;
+        width: 450px;
+        transform: translate(-50%, -50%);
+
+    }
+    #info{
+        top: -20px;
+        height: 150px;
+    }
+    #infoText{
+        right: 4%;
+        width: 25%;
+        padding: 10px;
+        position: absolute;
+        /* border-radius: 5px; */
+        border: 2px solid white;
+    }
+    #more{
+        font-size: 1em;
+    }
+    #socialMedia i{
+        display: none;
+    }
+}
